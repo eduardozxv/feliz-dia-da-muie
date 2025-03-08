@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia das Mulheres</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffb6b6, #f6c3ff);  /* Gradiente suave de rosa e lilás */
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);  /* Fundo levemente transparente */
+            border-radius: 15px;
+            backdrop-filter: blur(10px);  /* Efeito de desfoque no fundo */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);  /* Sombra suave para dar um destaque */
+        }
+
+        .title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out 1s forwards;
+        }
+
+        .love {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #f8a5c2;  /* Cor de destaque */
+            opacity: 0;
+            animation: fadeIn 4s ease-in-out 2s forwards;
+        }
+
+        .footer {
+            font-size: 1em;
+            margin-top: 30px;
+            font-style: italic;
+            opacity: 0;
+            animation: fadeIn 5s ease-in-out 3s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Adicionando o áudio com o atributo autoplay e loop -->
+    <audio id="audio" autoplay loop>
+        <source src="C:/Users/T-GAMER/Documents/Estudos/testes/billie.mp3" type="audio/mp3">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
+
+    <div class="container">
+        <div class="message">
+            <h1 class="title">Feliz Dia das Mulheres!</h1>
+            <p class="subtitle">Para a mulher mais incrível que existe, você é o meu sol, a minha luz, e minha razão de sorrir todos os dias!</p>
+            <p class="love">Te amo, com todo o meu coração! ❤️</p>
+            <p class="footer">Espero que seu dia seja tão especial quanto você é para mim. 💐</p>
+        </div>
+    </div>
+
+    <script>
+        // Função para ativar o áudio com um clique, caso o autoplay seja bloqueado
+        window.onload = function() {
+            var audio = document.getElementById('audio');
+
+            // Se o navegador bloquear o autoplay, vamos permitir o play após o clique do usuário
+            document.body.addEventListener('click', function() {
+                audio.play();
+            });
+        };
+    </script>
+</body>
+</html>
